@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title text-center>
+      Llamadas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <button ion-item (click)="mostrarPersonaje(personaje)" *ngFor="let personaje of personajes">
+          <ion-avatar item-start>
+            <img [src]="personaje.img">
+          </ion-avatar>
+          <h2>{{personaje.nombre}}</h2>
+          <p>{{personaje.titulo}}</p>
+        </button>
+      </ion-list>
+</ion-content>
